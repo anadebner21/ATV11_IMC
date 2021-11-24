@@ -3,7 +3,23 @@ function imc(){
     let altura = prompt ("Informe sua altura:");
     let peso = prompt ("Informe seu peso:");
     let imc = peso/(altura * altura);
-console.log(imc);
+    console.log(imc);
+
+    if(imc <17){
+        alert(`${nome}, você está MUITO abaixo do peso!\n Seu IMC é de ${imc}\n Dica: procure um nutricionista!`);
+    } else if(imc >= 17 && imc <= 18.49){
+        alert(`${nome}, você está um pouco abaixo do peso!\n Seu IMC é de ${imc}\n Dica: se alimente melhor!!`);
+    }else if(imc >= 18.5 && imc <= 24.99){
+        alert(`${nome}, está no peso ideal para você!\n Seu IMC é de ${imc}\n Dica: CONTINUE ASSIM!`);
+    }else if(imc >=25 && imc <= 29.99){
+        alert( `${nome}! Você está acima do peso.\n Seu IMC é de ${imc}\n Dica: É hora de parar de comer Big Mac.`);
+    }else if(imc >= 30 && imc <= 34.99){
+        alert(`${nome}, você está acima do peso!\n Seu IMC é de ${imc}, isso se encaixa em OBESIDADE 1! \n Dica: cuidado para não piorar, procure fazer atividades físicas!`);
+    }else if(imc >= 35 && imc <= 39.99){
+        alert(`${nome}, você está ACIMA do peso, OBESIDADE 2 = SEVERA!\n Seu IMC é de ${imc}\n Dica: Procure um nutricionista, CUIDADO!`);
+    }else {
+        alert(`${nome}, você está MUITO Acima do peso, OBESIDADE 3 = MÓRBIDA !\n Seu IMC é de ${imc}\n Dica: Procure um nutricionista, e faça ativadade física, muito Cuidado com sua saúde ${nome}!`);
+    }
   
 }
 
@@ -90,9 +106,8 @@ function gorjeta(){
     }
 
     function imprime(arrayRestaurantes, arrayPrecoTotal, gorgetas, resultados ){
-        for(i = 0; i < arrayRestaurantes.lenght; i++){
-            alert(`${arrayRestaurantes[i]} \n Valor: R$  ${arrayPrecoTotal[i]}  Gorjetas: R$  ${gorgetas[i]}  Total: R$ ${resultados[i]}`);
-        }
+        for(i = 0; i < arrayRestaurantes.length; i++){
+            alert(arrayRestautantes [i] + '\n\n Valor: ' + arrayPrecoTotal [i] + ' | Gorgeta: ' + gorgetas [i] + ' | Total: ' + resultados[i]);        }
     }
 
 
